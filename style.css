@@ -1,0 +1,579 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 40px;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+
+  color: #00bfff;
+}
+
+
+/* =========================
+   DESKTOP NAVIGATION
+========================= */
+
+nav {
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  text-decoration: none;
+
+  font-size: 18px;
+
+  color: #555;
+
+  transition: 0.3s;
+}
+
+
+/* NAV LINK HOVER */
+
+nav a:hover {
+  color: #00aaff;
+}
+
+
+/* =========================
+   USERNAME BUTTON
+========================= */
+
+.user-btn {
+  border: none;
+  border-radius: 12px;
+
+  padding: 12px 20px;
+
+  font-size: 16px;
+
+  background-color: #e5f7ff;
+  color: #00aaff;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+/* USER BUTTON HOVER */
+
+.user-btn:hover {
+  background-color: #00aaff;
+  color: white;
+
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.hamburger {
+  display: none;
+
+  border: none;
+  background: none;
+
+  font-size: 30px;
+
+  cursor: pointer;
+
+  color: #00aaff;
+}
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.menu-list {
+  display: none;
+
+  position: absolute;
+
+  right: 15px;
+  top: 65px;
+
+  width: 200px;
+
+  padding: 15px;
+
+  background-color: white;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+  z-index: 10;
+}
+
+
+/* MOBILE MENU LINKS */
+
+.menu-list a {
+  display: block;
+
+  padding: 12px;
+
+  text-decoration: none;
+
+  color: #555;
+
+  transition: 0.3s;
+}
+
+
+/* MOBILE MENU HOVER */
+
+.menu-list a:hover {
+  background-color: #e5f7ff;
+
+  color: #00aaff;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+main {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 50px 40px;
+}
+
+
+/* =========================
+   LEFT TEXT
+========================= */
+
+.hero {
+  width: 55%;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+h1 {
+  margin: 0;
+
+  font-size: 42px;
+
+  line-height: 1.1;
+
+  color: #40546a;
+}
+
+h1 span {
+  color: #00aaff;
+}
+
+
+/* =========================
+   PARAGRAPH
+========================= */
+
+p {
+  max-width: 550px;
+
+  font-size: 18px;
+
+  line-height: 1.5;
+
+  color: #777;
+}
+
+
+/* =========================
+   BOOK BUTTON
+========================= */
+
+.book-btn {
+  border: none;
+
+  border-radius: 15px;
+
+  padding: 18px 35px;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  background-color: #20aef3;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+/* BOOK BUTTON HOVER */
+
+.book-btn:hover {
+  background-color: #008ed6;
+
+  transform: scale(1.1) rotate(-2deg);
+
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.image-container {
+  width: 40%;
+}
+
+.image-container img {
+  width: 100%;
+
+  height: 450px;
+
+  object-fit: cover;
+
+  /*
+    Washing machine animation
+  */
+  animation: washingMachineOrbit 5s ease-in-out infinite;
+
+  /*
+    Makes the squeezing/stretching
+    happen from the center
+  */
+  transform-origin: center;
+}
+
+
+/* =========================
+   WASHING MACHINE ORBIT
+   + SQUEEZE ANIMATION
+========================= */
+
+@keyframes washingMachineOrbit {
+
+  /* Starting position */
+
+  0% {
+    transform:
+      translate(0, 0)
+      rotate(0deg)
+      scale(1, 1);
+  }
+
+
+  /* Move right + up */
+
+  20% {
+    transform:
+      translate(18px, -15px)
+      rotate(4deg)
+      scale(0.96, 1.04);
+  }
+
+
+  /* Stretch vertically */
+
+  40% {
+    transform:
+      translate(8px, -25px)
+      rotate(2deg)
+      scale(0.90, 1.10);
+  }
+
+
+  /* Move left + squeeze */
+
+  60% {
+    transform:
+      translate(-18px, -10px)
+      rotate(-4deg)
+      scale(1.06, 0.94);
+  }
+
+
+  /* Move down */
+
+  80% {
+    transform:
+      translate(-10px, 12px)
+      rotate(-2deg)
+      scale(0.95, 1.05);
+  }
+
+
+  /* Return to original position */
+
+  100% {
+    transform:
+      translate(0, 0)
+      rotate(0deg)
+      scale(1, 1);
+  }
+}
+
+
+/* =========================
+   TABLET
+   768px
+========================= */
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+
+  header {
+    padding: 15px 25px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  nav {
+    gap: 20px;
+  }
+
+  nav a {
+    font-size: 15px;
+  }
+
+  .user-btn {
+    font-size: 13px;
+
+    padding: 10px 15px;
+  }
+
+
+  /* HERO */
+
+  main {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 30px 25px;
+  }
+
+  .hero {
+    width: 100%;
+  }
+
+
+  /* HEADING */
+
+  h1 {
+    font-size: 32px;
+  }
+
+
+  /* PARAGRAPH */
+
+  p {
+    max-width: 600px;
+
+    margin: 15px auto;
+
+    font-size: 16px;
+  }
+
+
+  /* BOOK BUTTON */
+
+  .book-btn {
+    padding: 15px 25px;
+
+    font-size: 14px;
+  }
+
+
+  /* IMAGE */
+
+  .image-container {
+    width: 60%;
+
+    margin-top: 30px;
+  }
+
+  .image-container img {
+    height: 300px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   600px
+========================= */
+
+@media (max-width: 600px) {
+
+  /* HIDE DESKTOP NAVIGATION */
+
+  nav {
+    display: none;
+  }
+
+
+  /* HIDE USER BUTTON */
+
+  .user-btn {
+    display: none;
+  }
+
+
+  /* SHOW HAMBURGER */
+
+  .hamburger {
+    display: block;
+  }
+
+
+  /* =========================
+     SHOW MENU ON FOCUS
+  ========================= */
+
+  .hamburger:focus + .menu-list {
+    display: block;
+  }
+
+
+  /* NAVBAR */
+
+  header {
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+
+  /* HERO */
+
+  main {
+    padding: 20px 15px;
+  }
+
+
+  /* HEADING */
+
+  h1 {
+    font-size: 27px;
+  }
+
+
+  /* PARAGRAPH */
+
+  p {
+    font-size: 15px;
+  }
+
+
+  /* BOOK BUTTON */
+
+  .book-btn {
+    padding: 15px 25px;
+
+    font-size: 14px;
+  }
+
+
+  /* IMAGE */
+
+  .image-container {
+    width: 80%;
+  }
+
+  .image-container img {
+    height: 250px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   400px
+========================= */
+
+@media (max-width: 400px) {
+
+  header {
+    padding: 12px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .hamburger {
+    font-size: 26px;
+  }
+
+  main {
+    padding: 20px 10px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .book-btn {
+    padding: 13px 20px;
+  }
+
+  .image-container {
+    width: 90%;
+  }
+
+  .image-container img {
+    height: 220px;
+  }
+}
